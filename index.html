@@ -161,7 +161,6 @@ let lerp = function(start, end, value) {
 let game = document.getElementsByClassName("game");
 for (let i=0; i<game.length; i++) {
   let t = (i / (game.length-1));
-  t = t*t;
   const val = lerp(0, 0.5, t);
   const width = lerp(350, 400, t);
   game[i].style.setProperty("font-variation-settings", "\'CASL\'" + val);
@@ -170,7 +169,6 @@ for (let i=0; i<game.length; i++) {
 let write = document.getElementsByClassName("write");
 for (let i=0; i<write.length; i++) {
   let t = (i / (write.length-1));
-  t = t*t;
   const val = lerp(1, 0.5, t);
   const width = lerp(450, 400, t);
   write[i].style.setProperty("font-variation-settings", "\'CASL\'" + val);
